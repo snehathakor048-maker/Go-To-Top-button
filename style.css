@@ -146,29 +146,19 @@ form input {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
 
-  .nav-links {
-    position: absolute;
-    top: 60px;              
-    left: 0;
-    width: 100%;            
-    background: #0b1d78;    
-    display: none;
-    flex-direction: column;
-    padding: 20px 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 18px;
-  }
-}
+    .nav-links.show {
+        display: flex;
+    }
 
     .hamburger {
         display: block;
