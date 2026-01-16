@@ -6,37 +6,20 @@ hamburger.onclick = () => {
     navLinks.classList.toggle("show");
 };
 
-// Form Validation
-const nameInput = document.getElementById("name");
-const errorMsg = document.getElementById("errorMsg");
-const successMsg = document.getElementById("successMsg");
-const submitBtn = document.getElementById("submitBtn");
-const resetBtn = document.getElementById("resetBtn");
+// Success & Error buttons
+const message = document.getElementById("message");
 
-nameInput.addEventListener("input", () => {
-    if (nameInput.value.trim() === "") {
-        errorMsg.textContent = "Name is required";
-        successMsg.textContent = "";
-        submitBtn.disabled = true;
-    } else {
-        errorMsg.textContent = "";
-        submitBtn.disabled = false;
-    }
-});
+function showSuccess() {
+    message.textContent = "Form submitted successfully!";
+    message.style.color = "green";
+}
 
-submitBtn.onclick = (e) => {
-    e.preventDefault();
-    successMsg.textContent = "Form submitted successfully!";
-};
+function showError() {
+    message.textContent = "Something went wrong. Please try again.";
+    message.style.color = "red";
+}
 
-resetBtn.onclick = () => {
-    nameInput.value = "";
-    errorMsg.textContent = "";
-    successMsg.textContent = "";
-    submitBtn.disabled = true;
-};
-
-// Go Top
+// Go To Top
 const goTop = document.getElementById("goTop");
 
 window.onscroll = () => {
