@@ -49,17 +49,17 @@ body {
 /* Cards */
 .card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .card {
     width: 280px;
     background: #fff;
     border-radius: 10px;
-    padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
 }
 
 .card img {
@@ -73,50 +73,69 @@ body {
     color: #fff;
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
     margin-top: 10px;
-}
-
-/* Success & Error */
-.status-btns {
-    margin-top: 15px;
 }
 
 .success-btn {
-    background: #007bff;
+    background: #1e88e5;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    margin-right: 10px;
+    padding: 12px 25px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .error-btn {
-    background: #dc3545;
+    background: #e53935;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 12px 25px;
+    margin: 10px;
+    cursor: pointer;
 }
 
-/* Message */
-#message {
-    margin-top: 10px;
+#statusMessage {
+    margin-top: 15px;
     font-weight: bold;
 }
 
-/* Footer (WHITE unchanged) */
+/* Form */
+form {
+    max-width: 300px;
+    margin: auto;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.success-text {
+    color: green;
+    margin-top: 10px;
+}
+
+/* Footer (as it is) */
 .footer {
-    background: #fff;
-    color: #000;
-    padding: 30px;
+    background: #111;
+    color: #fff;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
 }
 
 .footer a {
-    color: #000;
-    text-decoration: none;
+    color: #fff;
     display: block;
+    text-decoration: none;
+    margin-top: 5px;
 }
 
 /* Go Top */
@@ -125,20 +144,22 @@ body {
     bottom: 20px;
     right: 20px;
     display: none;
-    padding: 10px;
+    padding: 10px 15px;
     background: red;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
         position: absolute;
         top: 70px;
+        left: 0;
         width: 100%;
         background: #0a1a6f;
+        display: none;
         flex-direction: column;
         align-items: center;
     }
