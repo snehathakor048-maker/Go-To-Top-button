@@ -1,4 +1,4 @@
-/* ================= MOBILE MENU ================= */
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -6,14 +6,14 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("show");
 });
 
-/* Close menu when link clicked (mobile UX) */
+
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("show");
     });
 });
 
-/* ================= FORM VALIDATION ================= */
+
 const nameInput = document.getElementById("name");
 const errorMsg = document.getElementById("errorMsg");
 const submitBtn = document.getElementById("submitBtn");
@@ -30,7 +30,7 @@ if (nameInput) {
     });
 }
 
-/* ================= GO TO TOP ================= */
+
 const goTop = document.getElementById("goTop");
 
 window.addEventListener("scroll", () => {
