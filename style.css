@@ -50,16 +50,16 @@ body {
 .card-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     width: 280px;
     background: #fff;
-    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -73,16 +73,21 @@ body {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Success & Error */
+.status-btns {
+    margin-top: 15px;
 }
 
 .success-btn {
-    background: #28a745;
+    background: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 10px;
 }
 
 .error-btn {
@@ -90,39 +95,28 @@ body {
     color: #fff;
     border: none;
     padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* Message */
+#message {
     margin-top: 10px;
-    cursor: pointer;
+    font-weight: bold;
 }
 
-/* Form */
-form {
-    max-width: 300px;
-    margin: auto;
-}
-
-form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-.error {
-    color: red;
-    font-size: 14px;
-}
-
-.success {
-    color: green;
-    font-size: 14px;
-}
-
-/* Footer */
+/* Footer (WHITE unchanged) */
 .footer {
-    background: #111;
-    color: #fff;
-    padding: 20px;
+    background: #fff;
+    color: #000;
+    padding: 30px;
     display: flex;
     justify-content: space-around;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+    display: block;
 }
 
 /* Go Top */
@@ -140,11 +134,11 @@ form input {
 /* Mobile */
 @media (max-width: 768px) {
     .nav-links {
+        display: none;
         position: absolute;
         top: 70px;
         width: 100%;
         background: #0a1a6f;
-        display: none;
         flex-direction: column;
         align-items: center;
     }
