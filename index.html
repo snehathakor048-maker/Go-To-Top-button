@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <header class="navbar">
     <div class="logo">LOGO</div>
 
@@ -24,68 +23,63 @@
     <div class="hamburger" id="hamburger">&#9776;</div>
 </header>
 
-
 <section class="search-section">
     <input type="text" id="searchInput" placeholder="Search...">
     <button id="searchBtn">🔍</button>
 </section>
-
 
 <section id="home" class="section">
     <h1>Frontend Internship</h1>
     <p>This website is deployed using GitHub Pages.</p>
 </section>
 
-
 <section id="cards" class="section">
     <h2>Reusable Card Component</h2>
 
     <div class="card-container">
-
-        <!-- Frontend Card -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159" alt="Frontend">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159">
             <h3>Frontend Development</h3>
             <p>Creating responsive and interactive websites.</p>
             <button class="primary-btn">Explore</button>
         </div>
 
-        <!-- UI UX Card -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="UI UX">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
             <h3>UI / UX Design</h3>
             <p>User-centered and intuitive digital experiences.</p>
             <button class="primary-btn">Explore</button>
         </div>
 
-        <!-- Responsive Card -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Responsive">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
             <h3>Responsive Design</h3>
             <p>Works perfectly on all devices.</p>
             <button class="primary-btn">Explore</button>
         </div>
-
     </div>
 </section>
 
-<!-- day 8 -->
+<!-- Contact -->
 <section id="contact" class="section">
     <h2>Contact Form</h2>
 
     <form id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name">
+        <input type="text" id="name" placeholder="Enter name">
 
         <span class="error" id="errorMsg"></span>
+        <span class="success" id="successMsg"></span>
 
-        <button type="submit" class="primary-btn" id="submitBtn" disabled>
+        <button type="submit" class="success-btn" id="submitBtn" disabled>
             Submit
+        </button>
+
+        <button type="button" class="error-btn" id="resetBtn">
+            Reset
         </button>
     </form>
 </section>
 
-<!-- day 9  -->
 <footer class="footer">
     <div>
         <h4>Links</h4>
@@ -101,10 +95,8 @@
     </div>
 </footer>
 
-<!-- day 10  -->
 <button id="goTop">↑</button>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
