@@ -1,37 +1,49 @@
-// Mobile Menu
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+/* ================= MOBILE MENU ================= */
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-hamburger.onclick = () => {
+hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("show");
-};
+});
 
-// Form Validation
+/* Close menu when link clicked (mobile UX) */
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+    });
+});
+
+/* ================= FORM VALIDATION ================= */
 const nameInput = document.getElementById("name");
 const errorMsg = document.getElementById("errorMsg");
 const submitBtn = document.getElementById("submitBtn");
 
-nameInput.addEventListener("input", () => {
-    if (nameInput.value.trim() === "") {
-        errorMsg.textContent = "Name is required";
-        submitBtn.disabled = true;
-    } else {
-        errorMsg.textContent = "";
-        submitBtn.disabled = false;
-    }
-});
+if (nameInput) {
+    nameInput.addEventListener("input", () => {
+        if (nameInput.value.trim() === "") {
+            errorMsg.textContent = "Name is required";
+            submitBtn.disabled = true;
+        } else {
+            errorMsg.textContent = "";
+            submitBtn.disabled = false;
+        }
+    });
+}
 
-// Go To Top
+/* ================= GO TO TOP ================= */
 const goTop = document.getElementById("goTop");
 
-window.onscroll = () => {
+window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         goTop.style.display = "block";
     } else {
         goTop.style.display = "none";
     }
-};
+});
 
-goTop.onclick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-};
+goTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
