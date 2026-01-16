@@ -147,6 +147,7 @@ form input {
 /* Mobile */
 @media (max-width: 768px) {
     .nav-links {
+        color:#fff;
         position: absolute;
         top: 70px;
         left: 0;
