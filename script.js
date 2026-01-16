@@ -1,4 +1,4 @@
-// Mobile Menu
+// Mobile menu
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -6,20 +6,39 @@ hamburger.onclick = () => {
     navLinks.classList.toggle("show");
 };
 
-// Success & Error buttons
-const message = document.getElementById("message");
+// Success / Error buttons
+const statusMessage = document.getElementById("statusMessage");
 
-function showSuccess() {
-    message.textContent = "Form submitted successfully!";
-    message.style.color = "green";
-}
+document.getElementById("showSuccess").onclick = () => {
+    statusMessage.style.color = "green";
+    statusMessage.textContent = "Operation completed successfully!";
+};
 
-function showError() {
-    message.textContent = "Something went wrong. Please try again.";
-    message.style.color = "red";
-}
+document.getElementById("showError").onclick = () => {
+    statusMessage.style.color = "red";
+    statusMessage.textContent = "Something went wrong!";
+};
 
-// Go To Top
+// Contact form
+const form = document.getElementById("contactForm");
+const nameInput = document.getElementById("name");
+const formError = document.getElementById("formError");
+const formSuccess = document.getElementById("formSuccess");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (nameInput.value.trim() === "") {
+        formError.textContent = "Name is required";
+        formSuccess.textContent = "";
+    } else {
+        formError.textContent = "";
+        formSuccess.textContent = "Form submitted successfully!";
+        nameInput.value = "";
+    }
+});
+
+// Go to top
 const goTop = document.getElementById("goTop");
 
 window.onscroll = () => {
