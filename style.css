@@ -7,16 +7,18 @@
 
 body {
     line-height: 1.6;
+    padding-top: 70px;
 }
 
-/* Navbar */
+
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 70px;
     background: #0a1a6f;
     color: #fff;
-    padding: 15px 20px;
+    padding: 0 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,40 +30,53 @@ body {
     font-weight: bold;
 }
 
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .nav-links a {
     color: #fff;
-    margin: 0 10px;
     text-decoration: none;
+    font-size: 16px;
 }
 
-.nav-links .primary-btn {
-    margin-left: 10px;
+.primary-btn {
+    background: #0a74ff;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
 
 .hamburger {
-    display: none;
+    display: none; 
     font-size: 26px;
     cursor: pointer;
 }
 
-/* Search */
+
 .search-section {
-    margin-top: 80px;
+    margin-top: 30px;
     text-align: center;
 }
 
 .search-section input {
     padding: 8px;
-    width: 200px;
+    width: 220px;
 }
 
-/* Sections */
+
 .section {
     padding: 60px 20px;
     text-align: center;
 }
 
-/* Cards */
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -82,22 +97,7 @@ body {
     border-radius: 10px;
 }
 
-/* Button */
-.primary-btn {
-    background: #0a74ff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-}
 
-.primary-btn:disabled {
-    background: gray;
-    cursor: not-allowed;
-}
-
-/* Form */
 form {
     max-width: 300px;
     margin: auto;
@@ -114,13 +114,14 @@ form input {
     font-size: 14px;
 }
 
-/* Footer */
+
 .footer {
     background: #111;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer a {
@@ -130,7 +131,7 @@ form input {
     margin-top: 5px;
 }
 
-/* Go Top */
+
 #goTop {
     position: fixed;
     bottom: 20px;
@@ -144,24 +145,35 @@ form input {
     cursor: pointer;
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
+
+    .hamburger {
+        display: block; 
+    }
+
     .nav-links {
-        color:#fff;
         position: absolute;
         top: 70px;
         left: 0;
-        background: white;
         width: 100%;
+        background: #0a1a6f; 
         flex-direction: column;
         display: none;
+        padding: 20px 0;
     }
 
     .nav-links.show {
         display: flex;
     }
 
-    .hamburger {
-        display: block;
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .primary-btn {
+        margin-top: 10px;
     }
 }
